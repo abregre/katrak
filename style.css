@@ -1,96 +1,35 @@
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+}
 
- #wrapper {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pacifico", cursive;
+}
+h2 {
+  font-size: 2.3rem;
+}
+
+#wrapper {
   overflow-x: hidden;
 }
-
-#sidebar-wrapper {
-min-height: 100vh;
-margin-left: -13rem;
--webkit-transition: margin .25s ease-out;
--moz-transition: margin .25s ease-out;
--o-transition: margin .25s ease-out;
-transition: margin .25s ease-out;
-position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-padding-top: 50px;
+#etsy{
+  position: absolute;
+  bottom: 100px;
+  right: 200px;
+  z-index: 10;
+  background-color: black;
+  padding: 2rem;
+  font-size: 1.8rem;
+  border: 1px solid #3a3f44 ;
 }
 
-#sidebar-wrapper .sidebar-heading {
-font-weight: 400;
-margin: 0;
-font-size: 37px;
-font-size: 2rem;
-display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-
-#menu-toggle{
-float: right;
-}
-#menu-toggle:hover{
-background-color: #78C2AD;
-border: none;
-}
-
-#sidebar-wrapper .nav-list {
-width: 15rem;
-}
-.nav-list a{
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-.nav-list a:hover{
-  margin-left: 20px;
-  transition: 0.4s;
-  color: white;
-  border: none;
-}
-
-#page-content-wrapper {
-min-width: 100vw;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-margin-left: 0;
-}
-
-@media (min-width: 360px) {
-#sidebar-wrapper {
-  margin-left: 0;
-}
-
-#page-content-wrapper {
-  min-width: 0;
-  width: 100%;
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1253&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 2;
-  
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: -13rem;
-}
-}
-#sidebar-wrapper p{
-  /* transform: rotate(-90deg); */
-  /* text-align: center; */
-  margin-top: 350%;
- font-size: 1rem;
-  font-style: italic;
-  
-}
-
-.overlay{
+.overlay {
   position: relative; /* Sit on top of the page content */
   display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -99,25 +38,104 @@ margin-left: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.4);
-  z-index: 1; 
-  
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  z-index: 1;
+}
+#sidebar-wrapper{
+  min-height: 100vh;
+  margin-left: -13rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  padding-top: 50px;
 }
 
-#home , #about, #art, #contact{
-  
+#sidebar-wrapper .sidebar-heading {
+  font-weight: 400;
+  margin: 0;
+  font-size: 37px;
+  font-size: 2rem;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+#menu-toggle {
+  float: right;
+  transform: translateX(10px);
+}
+#menu-toggle:hover {
+  background-color: #78c2ad;
+  outline: none;
+ 
+}
+
+#sidebar-wrapper .nav-list {
+  width: 15rem;
+}
+.nav-list a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-list a:hover {
+  margin-left: 20px;
+  transition: 0.4s;
+  color: white;
+  border: none;
+}
+
+
+#page-content-wrapper {
+  min-width: 100vw;
+  min-width: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('/artxtreme.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+
+#sidebar-wrapper p {
+  /* transform: rotate(-90deg); */
+  /* text-align: center; */
+  margin-top: 350%;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+
+
+#home,
+#about,
+#art,
+#contact {
   display: flex;
 }
 
-#home{
+#home {
   height: 100vh;
 }
 
-#about{
+#about {
   min-width: 0;
   width: 100%;
-  
-  background: url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80');
+  background: url("https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
+ 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -125,11 +143,11 @@ margin-left: 0;
   display: flex;
   flex-direction: column;
 }
-#art{
+#art {
   min-width: 0;
   width: 100%;
-  
-  background: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+
+  background: url("https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -137,11 +155,11 @@ margin-left: 0;
   display: flex;
   flex-direction: column;
 }
-#contact{
+#contact {
   min-width: 0;
   width: 100%;
-  
-  background: url('https://images.unsplash.com/photo-1579263359906-8cdf135f3fe2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=923&q=80');
+
+  background: url("https://images.unsplash.com/photo-1579263359906-8cdf135f3fe2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=923&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -150,13 +168,47 @@ margin-left: 0;
   flex-direction: column;
 }
 
-
-#margin-about{
+#margin-about {
   height: 30vh;
 }
-#margin-gallery{
+#margin-gallery {
   height: 10vh;
 }
-#margin-contact{
+#margin-contact {
   height: 20vh;
+}
+
+#social i{
+  color: white;
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-size: 3rem;
+}
+#social i:hover,
+#social i:focus{
+  color: #78c2ad;
+  border: 1px solid #78c2ad;
+  padding: 0.5rem;
+  border-radius: 20px;
+  transition: all 0.25s ease-in-out;
+}
+#social i:active{
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+#social{
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 500px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -13rem;
+  }
 }
