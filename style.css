@@ -98,7 +98,7 @@ h2 {
   min-width: 0;
   width: 100%;
   height: 100vh;
-  background: url('/artxtreme.png');
+  background: url('../artxtreme.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
